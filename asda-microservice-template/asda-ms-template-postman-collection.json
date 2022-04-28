@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "2b6ba18d-30c3-4851-8616-02ff26f39533",
+		"name": "asda-microservice-template-postman-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all Employees Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "authorization",
+						"value": "Basic dXNlcjp1c2Vy"
+					},
+					{
+						"key": "correlation-id",
+						"value": "corr"
+					},
+					{
+						"key": "country-code",
+						"value": "UK"
+					},
+					{
+						"key": "locale",
+						"value": "en-US"
+					},
+					{
+						"key": "session-id",
+						"value": "sess"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:8081/v1/employee/all",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"employee",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Employee Details",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "authorization",
+						"value": "Basic dXNlcjp1c2Vy"
+					},
+					{
+						"key": "correlation-id",
+						"value": "corr"
+					},
+					{
+						"key": "country-code",
+						"value": "UK"
+					},
+					{
+						"key": "locale",
+						"value": "en-US"
+					},
+					{
+						"key": "session-id",
+						"value": "sess"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"empId\": \"1\",\n  \"name\": \"E1\",\n  \"designation\": \"D1\",\n  \"salary\": \"42\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:8081/v1/employee/create",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"employee",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee Details",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "correlation-id",
+						"value": "corr"
+					},
+					{
+						"key": "country-code",
+						"value": "UK"
+					},
+					{
+						"key": "locale",
+						"value": "en-US"
+					},
+					{
+						"key": "session-id",
+						"value": "sess"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"empId\": \"1\",\n  \"name\": \"string\",\n  \"designation\": \"string222\",\n  \"salary\": 0\n}"
+				},
+				"url": {
+					"raw": "https://localhost:8081/v1/employee/1/update",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"employee",
+						"1",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee Details",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "correlation-id",
+						"value": "corr"
+					},
+					{
+						"key": "country-code",
+						"value": "UK"
+					},
+					{
+						"key": "locale",
+						"value": "en-US"
+					},
+					{
+						"key": "session-id",
+						"value": "sess"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:8081/v1/employee/1/delete?empId=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"employee",
+						"1",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "empId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
